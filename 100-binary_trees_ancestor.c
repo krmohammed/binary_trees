@@ -8,17 +8,17 @@
  * Return: pointer to lowest common ancestor
  */
 
-binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second)
+binary_tree_t *binary_trees_ancestor(binary_tree_t *fir, binary_tree_t *sec)
 {
 	binary_tree_t *ptr, *tmp;
 
-	if (first == NULL || second == NULL)
+	if (fir == NULL || sec == NULL)
 		return (NULL);
 
-	ptr = (binary_tree_t *)second;
+	ptr = sec;
 	while (ptr)
 	{
-		tmp = (binary_tree_t *)first;
+		tmp = fir;
 		while (tmp)
 		{
 			if (ptr == tmp)
